@@ -1,2 +1,11 @@
+import express from "express";
 
-console.log("Hello world");
+const app = express();
+
+app.get("*", (request, response) => {
+  response.end("Hello World!");
+})
+
+app.listen(3000, () => {
+  console.log("App listening");
+})
